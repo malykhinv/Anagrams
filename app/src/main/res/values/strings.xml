@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Anagrams</string>
+    <string name="input_your_text_here">Input your text here! Maximum 80 characters.</string>
+    <string name="reverse_words">Reverse words</string>
+    <string name="add_character">Add character</string>
+    <string name="how_to_use">How to use</string>
+    <string name="app_description">Write few words in the text field below.\nPress \"Reverse words\" button to reverse each word you typed.\nFollowing characters will be ignored:</string>
+    <string name="symbol">Symbol</string>
+    <string name="advice">Enter the text and click the button</string>
+    <string name="error_nothing_to_reverse">Error: nothing to reverse</string>
+    <string name="error_nothing_to_add">Error: nothing to add</string>
+    <string name="error_this_character_is_already_ignored">Error: this character is already ignored</string>
+</resources>
