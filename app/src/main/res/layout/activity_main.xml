@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textTitle"
+        android:id="@+id/textAppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_horizontal_big"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/layoutDescription"
+        android:id="@+id/layoutAppDescription"
         android:layout_width="@dimen/none"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_horizontal_regular"
@@ -32,10 +32,10 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitle">
+        app:layout_constraintTop_toBottomOf="@+id/textAppTitle">
 
         <LinearLayout
-            android:id="@+id/layoutHowToUse"
+            android:id="@+id/layoutAppDescriptionTitle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -56,7 +56,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageExpandCollapse"
+                android:id="@+id/imageExpandCollapseArrow"
                 android:layout_width="@dimen/width_small"
                 android:layout_height="@dimen/height_small"
                 android:layout_marginTop="@dimen/margin_vertical_small"
@@ -71,7 +71,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textDescription"
+            android:id="@+id/textAppDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_horizontal_regular"
@@ -82,7 +82,7 @@
             android:textSize="@dimen/text_regular" />
 
         <TextView
-            android:id="@+id/textIgnoredCharacters"
+            android:id="@+id/textSetOfIgnoredCharacters"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_horizontal_regular"
@@ -99,7 +99,7 @@
             android:textSize="@dimen/text_regular" />
 
         <LinearLayout
-            android:id="@+id/layoutAddIgnoredCharacter"
+            android:id="@+id/layoutUserAddIgnoredCharacters"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -109,14 +109,14 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/layoutAddCharacter"
+                android:id="@+id/layoutAddIgnoredCharacters"
                 android:layout_width="@dimen/width_big"
                 android:layout_height="@dimen/height_big"
-                android:hint="@string/symbol"
+                android:hint="@string/symbols"
                 android:textColorHint="@color/blue_grey_200">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextAddCharacter"
+                    android:id="@+id/editTextAddIgnoredCharacters"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/blue_grey_50"
@@ -128,19 +128,19 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/buttonAddCharacter"
+                android:id="@+id/buttonAddIgnoredCharacters"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/height_regular"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/margin_horizontal_regular"
-                android:text="@string/add_character" />
+                android:text="@string/add_characters" />
 
         </LinearLayout>
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textResult"
+        android:id="@+id/textReversed"
         android:layout_width="@dimen/none"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_horizontal_regular"
