@@ -72,7 +72,7 @@
 
         <TextView
             android:id="@+id/textAppDescription"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_horizontal_regular"
             android:layout_marginTop="@dimen/margin_vertical_small"
@@ -81,32 +81,35 @@
             android:textColor="@color/black"
             android:textSize="@dimen/text_regular" />
 
-        <TextView
-            android:id="@+id/textSetOfIgnoredCharacters"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_horizontal_regular"
-            android:layout_marginTop="@dimen/margin_vertical_regular"
-            android:layout_marginEnd="@dimen/margin_horizontal_regular"
-            android:layout_marginBottom="@dimen/margin_vertical_regular"
-            android:background="@drawable/ignored_characters_background"
-            android:gravity="center"
-            android:minHeight="36dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_regular" />
-
         <LinearLayout
             android:id="@+id/layoutUserAddIgnoredCharacters"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/margin_horizontal_regular"
             android:layout_marginEnd="@dimen/margin_horizontal_regular"
             android:layout_marginBottom="@dimen/margin_vertical_regular"
+            android:gravity="end"
             android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textSetOfIgnoredCharacters"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_horizontal_regular"
+                android:layout_marginTop="@dimen/margin_vertical_regular"
+                android:layout_marginEnd="@dimen/margin_horizontal_regular"
+                android:layout_marginBottom="@dimen/margin_vertical_regular"
+                android:layout_weight="1"
+                android:background="@drawable/ignored_characters_background"
+                android:gravity="center"
+                android:minHeight="36dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutAddIgnoredCharacters"
@@ -147,7 +150,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_horizontal_regular"
         android:layout_marginEnd="@dimen/margin_horizontal_regular"
-        android:layout_marginBottom="@dimen/margin_vertical_regular"
+        android:layout_marginBottom="@dimen/margin_vertical_small"
         android:text="@string/advice"
         android:textAlignment="textStart"
         android:textColor="@color/teal_700"
@@ -158,7 +161,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutTextToReverse"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="@dimen/height_big"
         android:layout_marginStart="@dimen/margin_horizontal_regular"
         android:layout_marginEnd="@dimen/margin_horizontal_regular"
@@ -169,8 +172,8 @@
         android:scrollbars="vertical"
         android:textColorHint="@color/blue_grey_200"
         android:verticalScrollbarPosition="right"
-        app:layout_constraintBottom_toTopOf="@+id/buttonReverseWords"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonReverseWords"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -190,10 +193,10 @@
         android:id="@+id/buttonReverseWords"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_vertical_regular"
+        android:layout_marginEnd="@dimen/margin_horizontal_regular"
         android:text="@string/reverse_words"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/layoutTextToReverse"
-        app:layout_constraintStart_toStartOf="@+id/layoutTextToReverse" />
+        app:layout_constraintBottom_toBottomOf="@+id/layoutTextToReverse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textReversed" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
