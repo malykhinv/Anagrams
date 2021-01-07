@@ -10,4 +10,5 @@
     <string name="error_nothing_to_reverse">Error: nothing to reverse</string>
     <string name="error_nothing_to_add">Error: nothing to add</string>
     <string name="error_this_character_is_already_ignored">Error: this character is already ignored</string>
+    <string name="image_description_expand_collapse">Expand/collapse \"How to use\" section.</string>
 </resources>
