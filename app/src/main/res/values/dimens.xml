@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="none">0dp</dimen>
+
+    <dimen name="margin_horizontal_small">6dp</dimen>
+    <dimen name="margin_horizontal_regular">12dp</dimen>
+    <dimen name="margin_horizontal_big">24dp</dimen>
+
+    <dimen name="margin_vertical_small">6dp</dimen>
+    <dimen name="margin_vertical_regular">12dp</dimen>
+    <dimen name="margin_vertical_big">24dp</dimen>
+    <dimen name="margin_vertical_large">48dp</dimen>
+
+    <dimen name="height_small">36dp</dimen>
+    <dimen name="height_regular">48dp</dimen>
+    <dimen name="height_big">64dp</dimen>
+
+    <dimen name="width_small">36dp</dimen>
+    <dimen name="width_big">96dp</dimen>
+
+    <dimen name="text_header_first">24sp</dimen>
+    <dimen name="text_header_second">20sp</dimen>
+    <dimen name="text_regular">14sp</dimen>
+</resources>
