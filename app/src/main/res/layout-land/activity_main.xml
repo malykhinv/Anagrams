@@ -12,22 +12,22 @@
         android:id="@+id/textAppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_horizontal_big"
-        android:layout_marginTop="@dimen/margin_vertical_regular"
+        android:layout_marginStart="@dimen/margin_padding_size_medium"
+        android:layout_marginTop="@dimen/margin_padding_size_medium"
         android:text="@string/app_name"
         android:textColor="@color/purple_500"
-        android:textSize="@dimen/text_header_first"
+        android:textSize="@dimen/text_size_large"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/layoutAppDescription"
-        android:layout_width="@dimen/none"
-        android:layout_height="@dimen/height_regular"
-        android:layout_marginStart="@dimen/margin_horizontal_regular"
-        android:layout_marginTop="@dimen/margin_vertical_regular"
-        android:layout_marginEnd="@dimen/margin_horizontal_regular"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_size_large"
+        android:layout_marginStart="@dimen/margin_padding_size_small"
+        android:layout_marginTop="@dimen/margin_padding_size_medium"
+        android:layout_marginEnd="@dimen/margin_padding_size_small"
         android:background="@drawable/description_background"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,31 +37,29 @@
         <LinearLayout
             android:id="@+id/layoutAppDescriptionTitle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/height_size_large"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textHowToUse"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_horizontal_regular"
-                android:layout_marginTop="@dimen/margin_vertical_regular"
-                android:layout_marginEnd="@dimen/margin_horizontal_regular"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_padding_size_small"
+                android:layout_marginEnd="@dimen/margin_padding_size_small"
                 android:layout_weight="1"
                 android:text="@string/how_to_use"
-                android:textAlignment="textStart"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
-                android:textSize="@dimen/text_header_second"
+                android:textSize="@dimen/text_size_large"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/imageExpandCollapseArrow"
-                android:layout_width="@dimen/width_small"
-                android:layout_height="@dimen/height_small"
-                android:layout_marginTop="@dimen/margin_vertical_small"
-                android:layout_marginEnd="@dimen/margin_horizontal_small"
-                android:layout_marginBottom="@dimen/margin_vertical_small"
+                android:layout_width="@dimen/width_size_medium"
+                android:layout_height="@dimen/height_size_medium"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_padding_size_small"
                 android:clickable="true"
                 android:contentDescription="@string/image_description_expand_collapse"
                 android:focusable="true"
@@ -74,21 +72,20 @@
             android:id="@+id/textAppDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_horizontal_regular"
-            android:layout_marginTop="@dimen/margin_vertical_small"
-            android:layout_marginEnd="@dimen/margin_horizontal_regular"
+            android:layout_marginStart="@dimen/margin_padding_size_small"
+            android:layout_marginEnd="@dimen/margin_padding_size_small"
             android:text="@string/app_description"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_regular" />
+            android:textSize="@dimen/text_size_medium" />
 
         <LinearLayout
             android:id="@+id/layoutUserAddIgnoredCharacters"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/margin_horizontal_regular"
-            android:layout_marginEnd="@dimen/margin_horizontal_regular"
-            android:layout_marginBottom="@dimen/margin_vertical_regular"
+            android:layout_marginStart="@dimen/margin_padding_size_medium"
+            android:layout_marginEnd="@dimen/margin_padding_size_medium"
+            android:layout_marginBottom="@dimen/margin_padding_size_small"
             android:gravity="end"
             android:orientation="horizontal">
 
@@ -97,10 +94,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/margin_horizontal_regular"
-                android:layout_marginTop="@dimen/margin_vertical_regular"
-                android:layout_marginEnd="@dimen/margin_horizontal_regular"
-                android:layout_marginBottom="@dimen/margin_vertical_regular"
+                android:layout_marginStart="@dimen/margin_padding_size_small"
+                android:layout_marginTop="@dimen/margin_padding_size_small"
+                android:layout_marginEnd="@dimen/margin_padding_size_small"
+                android:layout_marginBottom="@dimen/margin_padding_size_small"
                 android:layout_weight="1"
                 android:background="@drawable/ignored_characters_background"
                 android:gravity="center"
@@ -109,12 +106,12 @@
                 android:paddingEnd="12dp"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="@dimen/text_regular" />
+                android:textSize="@dimen/text_size_medium" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutAddIgnoredCharacters"
-                android:layout_width="@dimen/width_big"
-                android:layout_height="@dimen/height_big"
+                android:layout_width="@dimen/width_size_large"
+                android:layout_height="@dimen/height_size_xlarge"
                 android:hint="@string/symbols"
                 android:textColorHint="@color/blue_grey_200">
 
@@ -129,15 +126,15 @@
                     android:selectAllOnFocus="true"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/text_regular" />
+                    android:textSize="@dimen/text_size_small" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/buttonAddIgnoredCharacters"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/height_regular"
+                android:layout_height="@dimen/height_size_large"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/margin_horizontal_regular"
+                android:layout_marginStart="@dimen/margin_padding_size_medium"
                 android:text="@string/add_characters" />
 
         </LinearLayout>
@@ -146,15 +143,15 @@
 
     <TextView
         android:id="@+id/textReversed"
-        android:layout_width="@dimen/none"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_horizontal_regular"
-        android:layout_marginEnd="@dimen/margin_horizontal_regular"
-        android:layout_marginBottom="@dimen/margin_vertical_small"
+        android:layout_marginStart="@dimen/margin_padding_size_small"
+        android:layout_marginEnd="@dimen/margin_padding_size_small"
+        android:layout_marginBottom="@dimen/margin_padding_size_small"
         android:text="@string/advice"
         android:textAlignment="textStart"
         android:textColor="@color/teal_700"
-        android:textSize="@dimen/text_regular"
+        android:textSize="@dimen/text_size_medium"
         app:layout_constraintBottom_toTopOf="@+id/layoutTextToReverse"
         app:layout_constraintEnd_toEndOf="@+id/layoutTextToReverse"
         app:layout_constraintStart_toStartOf="@+id/layoutTextToReverse" />
@@ -162,10 +159,10 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutTextToReverse"
         android:layout_width="0dp"
-        android:layout_height="@dimen/height_big"
-        android:layout_marginStart="@dimen/margin_horizontal_regular"
-        android:layout_marginEnd="@dimen/margin_horizontal_regular"
-        android:layout_marginBottom="@dimen/margin_vertical_regular"
+        android:layout_height="@dimen/height_size_xlarge"
+        android:layout_marginStart="@dimen/margin_padding_size_medium"
+        android:layout_marginEnd="@dimen/margin_padding_size_medium"
+        android:layout_marginBottom="@dimen/margin_padding_size_medium"
         android:clickable="false"
         android:hint="@string/input_your_text_here"
         android:nestedScrollingEnabled="true"
@@ -186,17 +183,17 @@
             android:maxLength="80"
             android:selectAllOnFocus="false"
             android:textColor="@color/black"
-            android:textSize="@dimen/text_regular" />
+            android:textSize="@dimen/text_size_medium" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/buttonReverseWords"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_horizontal_regular"
+        android:layout_height="@dimen/height_size_large"
+        android:layout_marginEnd="@dimen/margin_padding_size_medium"
         android:text="@string/reverse_words"
         app:layout_constraintBottom_toBottomOf="@+id/layoutTextToReverse"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textReversed" />
+        app:layout_constraintTop_toTopOf="@+id/layoutTextToReverse" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

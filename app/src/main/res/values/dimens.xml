@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="none">0dp</dimen>
+    <dimen name="margin_padding_size_small">8dp</dimen>
+    <dimen name="margin_padding_size_medium">16dp</dimen>
+    <dimen name="margin_padding_size_xxlarge">40dp</dimen>
 
-    <dimen name="margin_horizontal_small">6dp</dimen>
-    <dimen name="margin_horizontal_regular">12dp</dimen>
-    <dimen name="margin_horizontal_big">24dp</dimen>
+    <dimen name="height_size_medium">24dp</dimen>
+    <dimen name="height_size_large">48dp</dimen>
+    <dimen name="height_size_xlarge">64dp</dimen>
 
-    <dimen name="margin_vertical_small">6dp</dimen>
-    <dimen name="margin_vertical_regular">12dp</dimen>
-    <dimen name="margin_vertical_big">24dp</dimen>
-    <dimen name="margin_vertical_large">48dp</dimen>
+    <dimen name="width_size_medium">24dp</dimen>
+    <dimen name="width_size_large">96dp</dimen>
 
-    <dimen name="height_small">36dp</dimen>
-    <dimen name="height_regular">48dp</dimen>
-    <dimen name="height_big">64dp</dimen>
-
-    <dimen name="width_small">36dp</dimen>
-    <dimen name="width_big">96dp</dimen>
-
-    <dimen name="text_header_first">24sp</dimen>
-    <dimen name="text_header_second">20sp</dimen>
-    <dimen name="text_regular">14sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
 </resources>

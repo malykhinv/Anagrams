@@ -135,13 +135,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void showError(int errorCode) {
         switch (errorCode) {
             case 0:
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.error_nothing_to_reverse), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getResources().getString(R.string.error_nothing_to_reverse), Toast.LENGTH_SHORT).show();
                 break;
             case 1:
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.error_nothing_to_add), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getResources().getString(R.string.error_nothing_to_add), Toast.LENGTH_SHORT).show();
                 break;
             case 2:
-                Toast.makeText(getApplicationContext(), getResources().getString(R.string.error_this_character_is_already_ignored), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getResources().getString(R.string.error_this_character_is_already_ignored), Toast.LENGTH_SHORT).show();
                 break;
         }
     }
