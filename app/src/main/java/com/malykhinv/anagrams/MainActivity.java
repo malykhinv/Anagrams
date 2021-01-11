@@ -64,15 +64,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Reverse text
         if (v.getId() == R.id.buttonReverseWords) {
-            if (editTextToReverse.getText().toString().length() > 0) reverseText(editTextToReverse.getText().toString());
+            if (editTextToReverse.getText().toString().length() > 0) {
+                String reversedText = reverseText(editTextToReverse.getText().toString());
+                showResultText(reversedText);
+            }
             else showError(ERROR_EMPTY_REVERSE_TEXT_FIELD);
         }
 
         // Add ignored characters
         if (v.getId() == R.id.buttonAddIgnoredCharacters) {
             if (editTextAddCharacter.length() > 0) {
-                String characterToIgnore = editTextAddCharacter.getText().toString();
-                if (!ignoredCharacters.toString().contains(characterToIgnore)) addCharacterToIgnoreList(characterToIgnore);
+                String charactersToIgnore = editTextAddCharacter.getText().toString();
+                if (!ignoredCharacters.toString().contains(charactersToIgnore)) {
+                    String newIgnoredCharacters = addCharactersToIgnoreList(charactersToIgnore);
+                    showIgnoredCharacters(newIgnoredCharacters);
+                }
                 else showError(ERROR_CHARACTER_IS_ALREADY_IGNORED);
             } else showError(ERROR_EMPTY_ADD_CHARACTER_TO_IGNORE_FIELD);
         }
@@ -92,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         descriptionCollapsed = true;
     }
 
-    public void reverseText(String text) {
+    public String reverseText(String text) {
         String[] words = text.split(" ");
         Map<Integer, Character> ignored = new HashMap<>();
         StringBuilder resultText = new StringBuilder();
@@ -118,18 +124,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             for (int i = 0; i < word.length(); i++) {
                 if (ignored.containsKey(i)) reversedWord.insert(i, ignored.get(i));
             }
-            resultText.append(reversedWord).append(" ");
+
+            // Append result text with reversed words and " "
+            resultText.append(reversedWord);
+            if (!word.equals(words[words.length-1])) resultText.append(" ");
         }
-        textResult.setText(resultText);
+
+        return resultText.toString();
     }
 
-    public void addCharacterToIgnoreList(String characterToIgnore) {
-        for (int i = 0; i < characterToIgnore.length(); i++) {
-            if (!ignoredCharacters.toString().contains(String.valueOf(characterToIgnore.charAt(i))) && characterToIgnore.charAt(i) != ' ') {
-                ignoredCharacters.append(characterToIgnore.charAt(i));
+    public void showResultText(String text) {
+        if (text != null) textResult.setText(text);
+    }
+
+    public String addCharactersToIgnoreList(String charactersToIgnore) {
+        for (int i = 0; i < charactersToIgnore.length(); i++) {
+            if (!ignoredCharacters.toString().contains(String.valueOf(charactersToIgnore.charAt(i))) && charactersToIgnore.charAt(i) != ' ') {
+                ignoredCharacters.append(charactersToIgnore.charAt(i));
             }
         }
-        textIgnoredCharacters.setText(ignoredCharacters);
+        return ignoredCharacters.toString();
+    }
+
+    public void showIgnoredCharacters(String text) {
+        if (text != null) textIgnoredCharacters.setText(text);
     }
 
     public void showError(int errorCode) {
